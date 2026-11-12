@@ -231,6 +231,8 @@ class BillingApp:
 
         if not bill:
             messagebox.showerror("Error", "Bill not found")
+            cur.close()
+            conn.close()
             return
 
         self.textarea.delete("1.0", END)
